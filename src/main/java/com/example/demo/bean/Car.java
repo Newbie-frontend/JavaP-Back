@@ -2,7 +2,8 @@ package com.example.demo.bean;
 
 import jakarta.persistence.*;
 
-@MappedSuperclass
+@Entity
+@Inheritance(strategy = InheritanceType.JOINED)
 public abstract class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

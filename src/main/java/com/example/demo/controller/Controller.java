@@ -2,14 +2,12 @@ package com.example.demo.controller;
 
 import com.example.demo.bean.*;
 import com.example.demo.repository.*;
-import org.hibernate.annotations.Synchronize;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -256,6 +254,7 @@ public class Controller {
        return binekRepository.save(binek);
     }
 
+
     @DeleteMapping("/binek/{id}")
     @ResponseBody
     public void deleteBinek(@PathVariable long id) {
@@ -281,7 +280,7 @@ public class Controller {
         System.out.println("isMakinesi" + isMakinesi.toString());
         return isMakinesiRepository.save(isMakinesi);
     }
-
+    @CrossOrigin
     @DeleteMapping("/ismakinesi/{id}")
     public void deleteIsMakinesi(@PathVariable long id) {
         isMakinesiRepository.deleteById(id);
@@ -327,6 +326,7 @@ public class Controller {
     }
 
     @PostMapping("/kamyon")
+    @ResponseBody
     public Kamyon createKamyon(@RequestBody Kamyon kamyon) {
         System.out.println("Kamyon" + kamyon.toString());
         return kamyonRepository.save(kamyon);

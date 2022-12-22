@@ -9,4 +9,7 @@ import java.util.Optional;
 public interface BinekRepository extends CarRepository {
     List<Binek> findByMarkaContaining(String marka);
     Optional<Binek> findAllById(long id);
+
+    @Override
+    void deleteById(Long aLong);
 }
