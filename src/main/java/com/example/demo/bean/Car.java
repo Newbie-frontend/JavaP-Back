@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
-public abstract class Car {
+public abstract class Car{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;

@@ -11,5 +11,4 @@ import java.util.Optional;
 public interface OtobusRepository extends CarRepository {
     List<Otobus> findByMarkaContaining(String marka);
     Optional<Otobus> findAllById(long id);
-    List<Otobus> findByModel(int model, Sort sort);
 }

@@ -11,5 +11,4 @@ import java.util.Optional;
 public interface KamyonRepository extends CarRepository{
     List<Kamyon> findByMarkaContaining(String marka);
     Optional<Kamyon> findAllById(long id);
-    List<Kamyon> findByModel(int model, Sort sort);
 }

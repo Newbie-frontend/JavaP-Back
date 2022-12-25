@@ -11,5 +11,4 @@ import java.util.Optional;
 public interface IsMakinesiRepository extends CarRepository{
     List<IsMakinesi> findByMarkaContaining(String marka);
     Optional<IsMakinesi> findAllById(long id);
-    List<IsMakinesi> findByModel(int model, Sort sort);
 }
